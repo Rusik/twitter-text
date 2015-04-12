@@ -1,4 +1,4 @@
-## Twitter text for Objective-C  
+### Twitter text for Objective-C  
 
-* Added numeric hashtags
+* Added numeric hashtags (optional)
 * Configured for Cocoa Pods
