@@ -1,18 +1,12 @@
 Pod::Spec.new do |s|
-  name = "twitter-text"
-  version = "1.11.1"
-  url = "https://github.com/twitter/#{name}"
-  git_url = "#{url}.git"
-  tag = "v#{version}"
-
-  s.name = name
-  s.version = version
-  s.license = { :type => "Apache License, Version 2.0" }
-  s.summary = "Objective-C port of the twitter-text handling libraries."
-  s.homepage = "#{url}/tree/#{tag}/objc"
-  s.source = { :git => "#{url}.git", :tag => tag }
-  s.source_files = "objc/lib/**/*.{h,m}"
-  s.author = { "Twitter, Inc." => "opensource@twitter.com" }
+  s.name      = "twitter-text"
+  s.version   = "1.11.1"
+  s.license   = { :type => "Apache License, Version 2.0" }
+  s.summary   = "Objective-C port of the twitter-text handling libraries (modified by Rusik)"
+  s.homepage  = "https://github.com/Rusik/twitter-text"
+  s.source    = { :git => 'https://github.com/Rusik/twitter-text', :tag => s.version.to_s }
+  s.author    = { "original: Twitter, Inc. modified: Ruslan Kavetsky" => "opensource@twitter.com" }
+  s.source_files = "lib/*.{h,m}"
   s.ios.deployment_target = "4.0"
   s.osx.deployment_target = "10.7"
 end
