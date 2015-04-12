@@ -69,8 +69,18 @@
     TWUHashtagBoundaryInvalidChars \
 @"]"
 
+#define NUMERIC_HASHTAGS
+#ifdef NUMERIC_HASHTAGS
+
+#define TWUValidHashtag \
+    @"(?:" TWUHashtagBoundary @")([#＃]" TWUHashtagAlphanumeric @"*" TWUHashtagAlphanumeric TWUHashtagAlphanumeric @"*)"
+
+#else
+
 #define TWUValidHashtag \
     @"(?:" TWUHashtagBoundary @")([#＃]" TWUHashtagAlphanumeric @"*" TWHashtagAlpha TWUHashtagAlphanumeric @"*)"
+
+#endif
 
 #define TWUEndHashTagMatch      @"\\A(?:[#＃]|://)"
 
